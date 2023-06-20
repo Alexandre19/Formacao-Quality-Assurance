@@ -1,0 +1,30 @@
+package dev.alexandre.automacao.pratica.selenium;
+
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.session.ChromeFilter;
+
+public class AppTest {
+	
+	private WebDriver driver;
+	
+	@Test
+	public void HelloSelenium() {
+		System.getProperty("webdriver.chrome.driver", "drivers/chromedrive");
+		driver = (WebDriver) new ChromeFilter();
+		driver.manage().window().maximize();
+		driver.get("http://automationpractice.com/index.php");
+		
+		driver.quit();
+	}
+
+    @Test
+    public void shouldAnswerWithTrue() {
+        assertTrue(true);
+    }
+
+}
