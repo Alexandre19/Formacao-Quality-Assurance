@@ -11,7 +11,7 @@ public class AppTest {
 
     @Test
     public void helloSelenium() {
-        System.getProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.getProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://www.automationpractice.pl/index.php");

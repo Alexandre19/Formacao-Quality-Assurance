@@ -1,3 +1,4 @@
+import org.apache.log4j.BasicConfigurator;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,16 +8,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-/* eu.alexandrecohen@gmail.com
-** @#$1902 */
 
 public class LoginTest {
 
     private WebDriver driver;
 
-    @BeforeEach
+        @BeforeEach
     void setUp() throws Exception {
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("http://www.automationpractice.pl/index.php?controller=my-account");
@@ -24,7 +23,7 @@ public class LoginTest {
 
     @AfterEach
     void tearDown() throws Exception {
-        driver.quit();
+       // driver.quit();
     }
 
     @Test
